@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+/* HEADER */
+header{
+    background-color: #FFC300;
+}
+.title{
+    padding: 15px;
+}
+h1{
+    color: black;
+    text-align: center;
+}
+span{
+    color: white;
+}
+#links{
+    text-align: center;
+    padding: 20px;
+}
+#links a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#links a:hover{
+    color: #FFC300;
+    background-color: white;
+}
+/* CONTENT */
+#content{
+    width: 900px;
+    margin: 0 auto;
+    background-color: rgb(241, 239, 239);
+}
+.posts{
+    width: 550px;
+}
+.post{
+    padding: 10px;
+}
+.post h3{
+    color: #FFC300;
+}
+.post p.postDate{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.post img{
+    width: 550px;
+}
+.post p.postContent{
+    font-size: 14px;
+    margin: 5px 0;
+    font-weight: 600;
+}
+.post a{
+    text-decoration: none;
+    color: #FFC300;
+}
+/* SIDE MENU*/
+#sideMenu{
+    float: right;
+    width: 300px;
+}
+.menu{
+    margin: 10px;
+}
+.menu h3{
+    background-color: #DEDADE;
+    color: #60595A;
+    padding: 5px;
+}
+.menu p{
+    padding: 5px;
+    font-size: 14px;
+}
+.menu a{
+    text-decoration: none;
+    color: #FFC300;
+}

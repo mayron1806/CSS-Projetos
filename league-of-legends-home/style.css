@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:  'Open Sans',-apple-system, sans-serif;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+
+    display: flex;
+}
+.side-bar{
+    width: 25%;
+    background-color: #F9F9F9;
+    border: 0;
+    padding: 40px 50px;  
+    text-align: center;
+}
+.side-bar img{
+    width: 50%;
+    height: 5%;
+}
+.login{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 70%;
+}
+.login .login-title{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.input input{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: #EFECEF;
+    color: #474747;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 10px;
+    font-weight: 600;
+    padding-top: 30px;
+}
+.input input:focus{
+    background-color: white;
+}
+.input p{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 11px;
+    font-weight: 800;
+    color: #A4A4A6;
+    padding: 5px;
+    transition: 0.5s;
+}   
+.input input:focus ~ p, .input input.on ~ p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+    font-size: 10px;
+}
+.input .hide-password{
+    color: transparent;
+    transition: 0.5s;
+}
+.input input:focus ~ .hide-password, .input input.on ~ .hide-password{
+    color: rgba(0, 0, 0, 1);
+}
+.input .hide-password.show .hide, .input .hide-password .show{
+    display: none;
+}
+.input .hide-password.show .show, .input .hide-password .hide{
+    display: initial;
+}
+.input ion-icon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+.login-options{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.option-login{
+    width: 30%;
+    background-color: red;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.082);
+}
+.option-login:nth-child(1) {
+    background-color: white;
+    color: black;
+}
+.option-login:nth-child(2) {
+    background-color: #1b4dc4;
+    color: white;
+}
+.option-login:nth-child(3) {
+    background-color: black;
+    color: white;
+}
+.manter-login{
+    margin: 10px 0;
+    text-align: start;
+}
+.manter-login span{
+    font-weight: 700;
+    color: #474747;
+    font-size: 12px;
+    line-height: 20px;
+    height: 100%;
+    display: inline-block;
+}
+.button-login{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #F9F9F9;
+    text-align: center;
+    line-height: 12px;
+}
+.button-login.on{
+    border: 1px solid #D13639;
+    cursor: pointer;
+}
+.button-login ion-icon{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.2); 
+}
+.button-login.on ion-icon{
+    
+    color: #D13639;
+}
+.footer{
+    height: 10%;
+    font-size: 10px;
+}
+.footer a{
+    display: block;
+    text-decoration: none;
+    color: #A4A4A6;
+    font-weight: 800;
+}
+.footer a:hover{
+    color: rgba(0, 0, 0, 0.582);
+}
+.footer a:active{
+    color: black;
+}
+.image{
+    background-image: url("/images/lol.png");
+    background-size: cover;
+    background-position: center;
+    background-color: red;
+    width: 75%;
+    position: relative;
+}
+.image img{
+    width: 100%;
+}
+.user{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 
+    1px 1px 5px rgba(0, 0, 0, 0.2),
+    -1px -1px 5px rgba(0, 0, 0, 0.2),
+    -1px 1px 5px rgba(0, 0, 0, 0.2),
+    1px -1px 5px rgba(0, 0, 0, 0.2);
+}
+.user ion-icon{
+    width: 20px;
+    height: 20px;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.555);
+    transition: 0.5s;
+}.user:hover ion-icon{
+    color: rgba(255, 255, 255, 0.77);
+}

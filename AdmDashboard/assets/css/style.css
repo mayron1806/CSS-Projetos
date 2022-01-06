@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black: #222;
+    --black1: #999;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navegation{
+    position: fixed;   
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navegation.active{
+    width: 80px;
+}
+.navegation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navegation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navegation ul li:hover, .navegation ul li.hovered{
+    background-color: var(--white);
+}
+.navegation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.navegation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navegation ul li a:hover, .navegation ul li.hovered a{
+    color: var(--blue);
+}
+.navegation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navegation ul li a .icon ion-icon{
+    font-size: 30px;
+}
+.navegation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+.navegation ul li:hover a::before, .navegation ul li.hovered a::before{
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.navegation ul li:hover a::after, .navegation ul li.hovered a::after{
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+/* main */
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: var(--white);
+    transition: 0.8s;
+}
+.main.expand{
+    position: absolute;
+    width: calc(100% - 80px);
+    left: 80px;
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+.search{
+    position: relative;
+
+    width: 400px;
+    margin: 0 10px;
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 30px;
+    outline: none;
+    border: 1px solid var(--black1);
+}
+.search label ion-icon{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
+}
+.user{
+    margin-right: 5px;
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.cardBox .card{
+    position: relative;
+    background-color: var(--white);
+    padding: 30px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+}
+.cardBox .card:hover{
+    background-color: var(--blue);
+}
+.cardBox .card .numbers{
+    position: relative; 
+    color: var(--blue);
+    font-size: 30px;
+}
+.cardBox .card .cardName{
+    color: var(--black1);
+    font-size: 20px;
+}
+.cardBox .card .iconBx{
+    color: var(--blue);
+}
+.cardBox .card .iconBx ion-icon{
+    font-size: 30px;
+    margin: 0 10px;
+}
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx{
+    color: var(--white);
+}
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+.details .recentOrders{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+}
+.details .recentOrders .cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.details .recentOrders .cardHeader h2{
+    color: var(--blue);
+    font-size: 40px;
+}
+.details .recentOrders .cardHeader .btn{
+    position: relative;
+    padding: 5px 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+
+}
+.details .recentOrders table tr td{
+    padding: 10px;
+}
+.details .recentOrders table tr td:last-child{
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2){
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(3){
+    text-align: center;
+}
+.details .recentOrders table thead td{
+    background-color: var(--grey);
+    font-size: 26px;
+}
+.details .recentOrders table tr{
+    color: var(--black);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+.details .recentOrders table tbody tr:hover{
+    background-color: var(--blue);
+    cursor: pointer;
+    color: var(--white);
+}
+.status.delivered{
+    padding: 2px 4px;
+    background-color: #28ff82;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 16px;
+}
+.status.pending{
+    padding: 2px 4px;
+    background-color: #fbff28;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+}
+.status.inProgress{
+    padding: 2px 4px;
+    background-color: #282cff;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+}
