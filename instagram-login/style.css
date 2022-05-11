@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+}
+html{
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+}
+:root{
+    /*colors*/
+    --black: rgb(189, 189, 189);
+    --white: #fff;
+    --background: #f3f3f3;
+    --blue: #3897F0;
+    --facebook-blue: #395285;
+}
+body{   
+    background-color: var(--background);
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    height: 95%;
+}
+.left{
+    width: 50%;
+}
+.left .image{
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/instagram-celular.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.right{
+    width: 30%;
+}
+.right .enter-account{
+    margin: auto;
+    border: 0.1rem solid var(--black);
+    padding: 4rem;
+    background-color: var(--white);
+    text-align: center;
+    margin: 3rem 0;
+}
+.enter-account form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.enter-account form .logo img{
+    width: 20rem;
+    margin-bottom: 3rem;
+}
+.enter-account form input[type="text"],
+.enter-account form input[type="password"]{
+    border: 0.1rem solid var(--black);
+    padding: 1rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+}
+.enter-account form input[type="submit"]{
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 800;
+    cursor: pointer;
+}
+.enter-account span{
+    color: var(--black);
+}
+.facebook-login{
+    margin: 2rem auto;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+.facebook-login a{
+    color: var(--facebook-blue);
+}
+.forgot-password a{
+    color: var(--blue);
+    font-weight: 600;
+}
+.create-account{
+    border: 0.1rem solid var(--black);
+    padding: 2rem;
+    text-align: center;
+}
+.create-account a{
+    color: var(--blue);
+}
+.obtain-app{
+    text-align: center;
+    padding: 2rem;
+}
+.obtain-app h4{
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.obtain-app .download-links{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.obtain-app .download-links a{
+    width: 40%;
+}
+.obtain-app .download-links a img{
+    width: 100%;
+}
+
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+footer a,
+footer p{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+footer a{
+    color: var(--blue);
+}
+footer p{
+    color: var(--black);
+}
